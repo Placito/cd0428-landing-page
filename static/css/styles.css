@@ -63,12 +63,20 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
+.navbar__menu {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    width: 100%;
+}
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
     text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
-
 .navbar__menu li {
     display: inline-block;
 }
@@ -86,20 +94,26 @@ section {
     color: #fff;
     transition: ease 0.3s all;
 }
-
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo p {
+    color: #000;
+}
 /* Header Styles */
 .page__header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 120px;
-    background: #11141a;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
     background: #fff;
+    padding: 20px ;
 }
 
 /* Footer Styles */
@@ -109,11 +123,6 @@ section {
     color: #fff;
     bottom: 0;
 }
-
-.page__footer p{
-    color: #fff;
-}
-
 
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
