@@ -1,0 +1,15 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "workspace for the Landing Page project",
+  "main": "js/app.js",
+  "scripts": {
+    "start": "live-server --port=3000"
+  },
+  "author": "Mariana P.",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "dependencies": {
+    "live-server": "^1.1.0",
+    "webpack": "^5.90.1"
+  }
+}

@@ -87,6 +87,7 @@ section {
     font-weight: bold;
     text-decoration: none;
     color: #000;
+    cursor: pointer;
 }
 
 .navbar__menu .menu__link:hover {
@@ -98,6 +99,8 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+    text-decoration: none;
 }
 .logo p {
     color: #000;

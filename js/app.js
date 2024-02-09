@@ -1,62 +1,32 @@
-/**
- * 
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
- * 
- * Dependencies: None
- * 
- * JS Version: ES2015/ES6
- * 
- * JS Standard: ESlint
- * 
-*/
+// Select the navbar menu
+const navbarMenu = document.querySelector("#navbar__list");
 
-/**
- * Comments should be present at the beginning of each procedure and class.
- * Great to have comments before crucial code sections within the procedure.
-*/
+// Create an array of button labels
+const labels = ["Section 1", "Section 2", "Section 3"];
 
-/**
- * Define Global Variables
- * 
-*/
+// Create a document fragment to improve performance when adding multiple elements
+const fragment = document.createDocumentFragment();
 
+for (let i = 0; i < labels.length; i++) {
+    // Create list item
+    const listItem = document.createElement("li");
+    
+    // Create anchor element
+    const anchor = document.createElement("a");
+    anchor.textContent = labels[i];
+    anchor.setAttribute("href", `#${labels[i].toLowerCase().replace(/\s/g, "")}`);
+    
+    // Add class to listItem 
+    anchor.classList.add("menu__link");
+    // Add atribute to listItem 
+    listItem.setAttribute("data-nav", `${labels[i]}`);
+    
+    // Append anchor element to list item
+    listItem.appendChild(anchor);
+    
+    // Append list item to fragment
+    fragment.appendChild(listItem);
+}
 
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
-
-
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-
-// build the nav
-
-
-// Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
-
-
+// Append fragment to navbar menu
+navbarMenu.appendChild(fragment);
