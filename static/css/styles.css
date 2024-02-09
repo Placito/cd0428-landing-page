@@ -15,7 +15,6 @@ body {
     background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
     margin: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
     font-family: 'Merriweather', serif;
     color: #fff;
 }
@@ -50,14 +49,15 @@ main {
     margin: 10vh 1em 10vh;
 }
 
-.main-hero {
-    min-height: 40vh;
+.main__hero {
+    min-height: 80vh;
     padding-top: 3em;
+    scroll-behavior: smooth;
 }
 
 section {
     position: relative;
-    min-height: 80vh;
+    min-height: 72vh;
 }
 
 /* ---- Module Rules ---- */
@@ -125,6 +125,8 @@ section {
     padding: 3em;
     color: #fff;
     bottom: 0;
+    position: fixed;
+    width: 100%;
 }
 
 /* ---- Theme Rules ---- */
@@ -146,7 +148,6 @@ section:nth-of-type(even) .landing__container {
     margin-left: auto;
     text-align: right; 
 }
-
 /* Background Circles */
 /* Note that background circles are created with psuedo elements before and after */
 /* Circles appear to be random do to use of :nth-of-type psuedo class */
@@ -170,8 +171,8 @@ section:nth-of-type(even) .landing__container::before {
     top: 3em;
     right: 3em;
     z-index: -5;
-    width: 10vh;
-    height: 10vh;
+    width: 20vh;
+    height: 20vh;
     border-radius: 50%;
     opacity: 0;
     transition: ease 0.5s all;
@@ -197,16 +198,30 @@ section:nth-of-type(3n + 1) .landing__container::after {
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
     position: absolute;
-    right: 20vw;
+    left: 0;
     bottom: -5em;
     z-index: -5;
-    width: 15vh;
-    height: 15vh;
+    width: 10vh;
+    height: 10vh;
     border-radius: 50%;
     opacity: 0;
     transition: ease 0.5s all;
 }
 
+section:nth-of-type(2n) .landing__container::after {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    left: 0;
+    bottom: -5em;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
 
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
