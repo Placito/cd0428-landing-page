@@ -41,8 +41,8 @@ const navbarMenu = document.querySelector("#navbar__list");
 const menuToggle = document.querySelector(".menu__toggle");
 
 // Create an array of button labels and corresponding section IDs
-const labels = ["Section 1", "Section 2", "Section 3"];
-const sectionIds = ["section1", "section2", "section3"]; // IDs of the sections corresponding to the links
+const labels = ["Section 1", "Section 2", "Section 3","Section 4"];
+const sectionIds = ["section1", "section2", "section3", "section4"]; // IDs of the sections corresponding to the links
 
 // Function to create anchor elements for the navbar menu
 function createMenuItems(labels, sectionIds) {
@@ -129,3 +129,35 @@ function removeDropdownMenu() {
 
 // Event listener for the menu toggle button
 menuToggle.addEventListener('click', createDropdownMenu);
+
+document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelectorAll(".menu__link");
+    
+    // Highlight active section on click
+    navLinks.forEach(link => {
+      link.addEventListener("click", function() {
+        navLinks.forEach(navLink => {
+          navLink.classList.remove("active");
+        });
+        this.classList.add("active");
+      });
+    });
+  
+    // Highlight active section on scroll
+    window.addEventListener("scroll", function() {
+      const fromTop = window.scrollY;
+  
+      navLinks.forEach(link => {
+        const section = document.querySelector(link.hash);
+  
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+  });

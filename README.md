@@ -1,12 +1,13 @@
 # Landing Page Project
 
 ## Description
-This project is a simple landing page designed to showcase a product, service, or any other content. 
+This is a project done at school level to help me understand and manipulate the DOM (document object model)
 
 ## Features
 - Clean and modern design
 - Responsive layout for various screen sizes
 - Easily customizable content
+- 4 sections
 
 ## Technologies Used
 - HTML5
