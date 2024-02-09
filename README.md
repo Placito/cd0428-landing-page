@@ -7,7 +7,6 @@ This project is a simple landing page designed to showcase a product, service, o
 - Clean and modern design
 - Responsive layout for various screen sizes
 - Easily customizable content
-- Integration with social media platforms
 
 ## Technologies Used
 - HTML5
