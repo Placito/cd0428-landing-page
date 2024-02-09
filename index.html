@@ -6,8 +6,11 @@
   <title>Manipulating the DOM</title>
   <!-- add afavicon -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <!-- FontAwesome v6.1.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
   <!-- Load Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  
+  <!-- Load Styles -->
   <link href="static/css/styles.css" rel="stylesheet">
 </head>
 <body>
@@ -21,6 +24,8 @@
       </a>
       <!-- Navigation starts as empty UL that will be populated with JS -->
       <ul id="navbar__list"></ul>
+      <!-- To create a responsive navbar that switches to a dropdown menu when the screen size change -->
+      <button class="menu__toggle" id="menuToggle"><i class="fa-solid fa-bars fa-2xl" style="color: #000000;"></i></button>
     </nav>
   </header>
   <main>
